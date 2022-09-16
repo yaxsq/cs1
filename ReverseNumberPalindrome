@@ -1,0 +1,47 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
+ */
+package ex3;
+import java.util.*;
+/**
+ *
+ * @author 27115
+ */
+public class Ex3 {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
+        Scanner in = new Scanner(System.in);
+        
+        System.out.print("Enter the number: ");
+        int number = in.nextInt();
+        int reverse =0 ; 
+        int original = number ;
+        
+        while(number != 0){
+            int last = number % 10;
+            reverse = (reverse*10) + last;
+            number = number/10;
+        }
+        
+        System.out.println("The reverse number is " + reverse);
+        if (reverse == original) 
+            System.out.println("This number is a palindrome.");
+        
+        else 
+            System.out.println("This number is not a palindrome.");
+        
+        /*extract last number // logic for for and while parts
+       decrease original
+        last * 10 power count-1
+        loop
+        */
+     
+        
+    }
+    
+}
