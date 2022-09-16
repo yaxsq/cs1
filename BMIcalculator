@@ -1,0 +1,60 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
+ */
+package lav2;
+
+import java.util.*;
+
+/**
+ *
+ * @author 27115
+ */
+public class Lav2 {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
+        Scanner input = new Scanner(System.in);
+        
+        System.out.print("Enter your age in years: "); // AGE CHECK
+        int age = input.nextInt();
+        
+        if (age <16){
+            System.out.println("You must be 16 or older.");
+            System.exit(1);
+        }
+                
+        System.out.print("Enter your height in meters: "); // HEIGHT INPUT
+        double height = input.nextDouble();
+        System.out.print("Enter your weight in kilogram: "); // WEIGHT INPUT
+        double weight = input.nextDouble();
+        
+        
+        double bmi = weight/(Math.pow(height, 2));  // BMI CALCULATION
+        
+        System.out.print("Your BMI is " + bmi );
+        
+        if (bmi < 18.5){
+            System.out.println(", you are underweight.");
+        }
+        else if (bmi < 25.0 && bmi >= 18.5) {
+            System.out.println(", your BMI is normal.");
+        }
+        
+        else if (bmi < 30.0 && bmi >= 25.0) {
+            System.out.println(", you are overweight.");
+        }
+        else if (bmi >= 30.0) {
+            System.out.println(", you are obese.");
+        }
+        
+    }
+        
+        
+        
+        
+}
+    
