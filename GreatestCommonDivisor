@@ -1,0 +1,52 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
+ */
+package ex1;
+import java.util.*;
+/**
+ *
+ * @author 27115
+ */
+public class Ex1 {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
+        Scanner in = new Scanner(System.in);
+        
+        System.out.print("Enter the first number: ");
+        double n1 = in.nextDouble();
+        System.out.print("Enter your second number: ");
+        double n2 = in.nextDouble();
+        double check1;
+        double check2; 
+        double gcd; 
+        double i; 
+        i = 2;
+        double temp;
+        //set n1 as bigger loop from 2 to n2 set gcd until n2 
+        
+        if (n2>n1) {
+            temp = n2;
+            n2 = n1;
+            n1 = temp;
+        }
+                
+        gcd = 0;
+                
+        do {
+            check1 = n1 % i;
+            check2 = n2 % i;
+            if (check1 == 0 && check2 == 0) {
+                gcd = i;
+            }
+            i += i;
+        } while (i <= n2);
+        
+        System.out.println("The greatest common divisor is " + gcd);
+    }
+    
+}
